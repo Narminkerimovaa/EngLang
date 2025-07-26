@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-font: Arial;
+  --primary-size-16: 1rem;
+  --primary-size-32: 2rem;
+  --primary-blue:#278EF2;
+  --primary-darkblue:#4D48FA;
+}
