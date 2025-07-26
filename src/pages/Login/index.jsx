@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { useAuth } from "./../../context/AuthProvider";
+import { useAuth } from "../../context/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 // import google from "./../../assets/google.png";
 // import facebook from "./../../assets/facebook.png";

@@ -1,7 +1,7 @@
-import logo from "./../../assets/EngLang_logo.png";
-import search from "./../../assets/search_icon.png";
-import user from './../../assets/user_lang.png';
-import fav from './../../assets/fav_lang.png';
+import logo from "../../assets/EngLang_logo.png";
+import search from "../../assets/search_icon.png";
+import user from '../../assets/user_lang.png';
+import fav from '../../assets/fav_lang.png';
 import {Link} from 'react-router'
 import { FaAngleDown } from "react-icons/fa6";
 import './style.css'
