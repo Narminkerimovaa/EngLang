@@ -193,6 +193,7 @@
   width: 100%;
   justify-content: space-between;
   font-size: 14px;
+  margin-top: 20px;
 }
 
 .container .login_wrapper .login_form .login_content .login_signup a {

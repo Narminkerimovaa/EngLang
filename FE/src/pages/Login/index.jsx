@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useAuth } from "./../../context/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import google from "./../../assets/google.png";
-import facebook from "./../../assets/facebook.png";
+// import google from "./../../assets/google.png";
+// import facebook from "./../../assets/facebook.png";
+import {Link} from 'react-router'
 import "./style.css";
 
 function Login() {
@@ -95,16 +96,16 @@ function Login() {
                                 {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
                             </form>
 
-                            <div className="login_another_way">
+                            {/* <div className="login_another_way">
                                 <div className="hr_line"></div>
                                 or
                                 <div className="hr_line"></div>
-                            </div>
+                            </div> */}
 
-                            <div className="login_another_icons">
+                            {/* <div className="login_another_icons">
                                 <img src={google} alt="google" />
                                 <img src={facebook} alt="facebook" />
-                            </div>
+                            </div> */}
 
                             <div className="login_signup">
                                 <div>Don’t have an account ?</div>
