@@ -76,6 +76,38 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const register = async (name, email, password) => {
+        try {
+            const response = await fetch('YOUR_BACKEND_REGISTER_URL', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password }),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Qeydiyyat uğursuz oldu!');
+            }
+
+            const data = await response.json();
+            const receivedToken = data.token;
+
+            if (receivedToken) {
+                setToken(receivedToken);
+                setIsAuthenticated(true);
+                setCookie('auth_token', receivedToken, 7);
+                return true;
+            } else {
+                return true;
+            }
+        } catch (error) {
+            console.error('Qeydiyyat xətası:', error);
+            throw error;
+        }
+    };
+
     const logout = () => {
         setToken(null);
         setIsAuthenticated(false);
@@ -88,6 +120,7 @@ export const AuthProvider = ({ children }) => {
         loading,
         login,
         logout,
+        register,
     };
 
     return (
